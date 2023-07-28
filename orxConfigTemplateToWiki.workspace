@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="orxConfigTemplateToWiki" Database="" Version="10000">
+  <Project Name="orxConfigTemplateToWiki" Path="orxConfigTemplateToWikiConverter/orxConfigTemplateToWiki.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="orxConfigTemplateToWiki" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="orxConfigTemplateToWiki" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
