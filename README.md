@@ -6,17 +6,13 @@ This project is created specifically for maintainers of the Orx Portable Game En
 
 ## What does it do?
 
-The SettingsTemplate.ini https://github.com/orx/orx/blob/master/code/bin/SettingsTemplate.ini is our source of truth when data config properties are added or changed. We change the format a little on the wiki by hand. This is very labourious.
+The https://github.com/orx/orx/blob/master/code/bin/SettingsTemplate.ini and https://github.com/orx/orx/blob/master/code/bin/CreationTemplate.ini are our source of truth when data config properties are added or changed on the wiki pages. We change the format a little on the wiki by hand. This is very labourious.
 
-The program simple takes the SettingsTemplate.ini file and creates a new file suitable for cutting and pasting into the wiki to reduce the effort required to keep the wiki in sync with the data config files.
+The program simple takes both files and creates a new formatted versions suitable for cutting and pasting into the wiki to reduce the effort required to keep the wiki in sync with the data config files.
 
 ## How to use it?
 
-You can either take the source file (main.cpp) and compile this yourself, or take a copy of the .exe. When you have an executable, simply run it. The program will use your $ORX environment variable to locate the SettingsTemplate.ini file in your orx repo and create the wiki formatted file for you automatically. It is created next to the original file.
-
-## What about CreationTemplate.ini?
-
-That will come next.
+You can either take the source file (main.cpp) and compile this yourself, or take a copy of the .exe. When you have an executable, simply run it. The program will use your $ORX environment variable to locate the .ini files in your orx repo and create the wiki formatted file for you automatically. They are created next to the original files.
 
 ## Where is the wiki?
 

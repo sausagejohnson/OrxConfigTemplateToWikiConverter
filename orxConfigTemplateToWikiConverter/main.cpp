@@ -9,18 +9,16 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
-{
-	cout << "Running as: " << argv[0] << endl;
-	
+
+int convertFile(std::string fileName){
 	string orxEnv = std::getenv("ORX");
 	cout << "orxEnvironment is: " << orxEnv << endl;
 
-	string pathToSettingsConfigFile = orxEnv + "\\bin\\CreationTemplate.ini";
-	cout << "Path to SettingsConfig.ini is: " << pathToSettingsConfigFile << endl;
+	string pathToSettingsConfigFile = orxEnv + "\\bin\\" + fileName + ".ini";
+	cout << "Path to " + fileName + ".ini is: " << pathToSettingsConfigFile << endl;
 	
-	string pathToWikiConfigFile = orxEnv + "\\bin\\wikiTemplate.ini";
-	cout << "Path to wikiTemplate.ini is: " << pathToWikiConfigFile << endl;
+	string pathToWikiConfigFile = orxEnv + "\\bin\\" + fileName + "WikiFormat.ini";
+	cout << "Path to " + fileName + "WikiFormat.ini is: " << pathToWikiConfigFile << endl;
 
 	ifstream configFile;
 	configFile.open(pathToSettingsConfigFile, ios::in);
@@ -98,7 +96,18 @@ int main(int argc, char **argv)
 	wikiFormattedFile.close();
 	configFile.close();
 	
-	cout << endl << endl << "Conversion complete. " << pathToWikiConfigFile << " has been saved." << endl;
+	cout << endl << endl << "Conversion complete. " << pathToWikiConfigFile << " has been saved." << endl << endl;
+	
+	return 1;
+}
+
+int main(int argc, char **argv)
+{
+	cout << "Running as: " << argv[0] << endl;
+	
+	convertFile("CreationTemplate");
+	convertFile("SettingsTemplate");
+
 	cout << "Press any key to close." << endl;
 	
 	getchar();
