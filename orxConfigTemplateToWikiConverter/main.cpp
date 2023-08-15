@@ -66,6 +66,7 @@ int convertFile(std::string fileName){
 					std::regex rightBracket("\\]");
 					std::regex angleBracketContent("<(.*?)>");
 					std::regex pipeSpace("\\|");
+					std::regex semiColonTerminator(";");
 
 					std::string infoWithCorrectedLeftBracket = std::regex_replace(information, leftBracket, "<");
 					std::string infoWithCorrectedBrackets = std::regex_replace(infoWithCorrectedLeftBracket, rightBracket, ">");
@@ -83,7 +84,8 @@ int convertFile(std::string fileName){
 					}
 					
 					if (details.length() > 0){
-						detailsBuffer << "* ''" << informationKeyName << "'': " << details << endl;
+						std::string detailsEndingWithPeriod = std::regex_replace(details, semiColonTerminator, ".");
+						detailsBuffer << "* ''" << informationKeyName << "'': " << detailsEndingWithPeriod << endl;
 					}
 					
 				}
